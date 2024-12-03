@@ -21,9 +21,7 @@ pipeline {
         stage('Run Docker Image') {
             steps {
                 script {
-                    docker.image('node-webapp:latest').run('-d -p 3000:3000') {
-                       
-                    }
+                    docker.image('node-webapp:latest').run('-d -p 3000:3000') 
                 }
             }
         }
